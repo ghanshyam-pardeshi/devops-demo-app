@@ -25,7 +25,8 @@ def metrics():
 
 @app.route('/date')
 def date():
-    return {"date": str(datetime.now().date())}
-
+    from datetime import date
+    return {"date": str(date.today())}
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
