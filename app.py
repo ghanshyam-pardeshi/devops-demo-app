@@ -11,5 +11,10 @@ def hello():
 def time():
     return {"time": str(datetime.now())}
 
+@app.route('/date')
+def date():
+    from datetime import date
+    return {"date": str(date.today())}
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
